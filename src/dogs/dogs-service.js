@@ -5,11 +5,11 @@ const DogsService = {
   },
 
   getById(id) {
-    return dogs.find((dog)=> dog.id === id);
+    return dogs.find((dog)=> dog.id+'' === id);
   },
 
-  deletePets(id) {
-    return  dogs.filter((dog)=> dog.id !== id);
+  deleteDog(id) {
+    return  dogs.filter((dog)=> dog.id+'' !== id);
   }
 };
 
