@@ -1,4 +1,5 @@
 const {dogs} = require('../STORE');
+
 const DogsService = {
   getAllDogs() {
     return dogs

@@ -1,9 +1,11 @@
 const Queue = require('./utils/queue');
 const users = new Queue();
+
 users.enqueue({id: 0, name: 'Tom'});
 users.enqueue({id: 1, name: 'Andrew'});
 users.enqueue({id: 2, name: 'Jenny'});
 users.enqueue({id: 3, name: 'Everlyn'});
+
 const dogs = [
     {
         id: 0,
@@ -34,8 +36,19 @@ const dogs = [
         age: 1,
         breed: 'Keeshond',
         story: 'Owner Passed away'
+    },
+    {
+        id: 3,
+        imageURL: 'https://images.dog.ceo/breeds/terrier-norfolk/n02094114_3253.jpg',
+        imageDescription: 'A smiling terrier norfolk next to the grasses with ball.',
+        name: 'Doggy',
+        sex: 'Male',
+        age: 2,
+        breed: 'Terrier Norfolk',
+        story: 'Owner Passed away'
     }
 ];
+
 const cats = [
     {
         id: 0,
@@ -65,6 +78,16 @@ const cats = [
         name: 'Hello',
         sex: 'Male',
         age: 3,
+        breed: 'Nebelung',
+        story: 'Thrown on the street'
+    },
+    {
+        id: 3,
+        imageURL:'https://cdn2.thecatapi.com/images/2gq.jpg',
+        imageDescription: 'White color cute small cat.',
+        name: 'Air',
+        sex: 'Female',
+        age: 0.5,
         breed: 'Nebelung',
         story: 'Thrown on the street'
     }

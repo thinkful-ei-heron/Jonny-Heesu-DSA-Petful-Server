@@ -1,6 +1,7 @@
 const express = require('express');
 const DogsService = require('./dogs-service');
 const dogsRouter = express.Router();
+
 dogsRouter
     .route('/')
     .get((req, res, next) => {

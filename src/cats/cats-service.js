@@ -1,4 +1,5 @@
-const {cats} = require('../STORE')
+const {cats} = require('../STORE');
+
 const CatsService = {
   getAllCats() {
     return cats

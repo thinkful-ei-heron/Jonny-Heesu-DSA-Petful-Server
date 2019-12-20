@@ -1,4 +1,5 @@
 const {users} = require('../STORE');
+
 const UsersService = {
   getAllUsers() {
     let usersTemp = users.first;
