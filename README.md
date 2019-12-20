@@ -1,26 +1,27 @@
-# Express Boilerplate!
+#  FIFO Pet Adaption Agency API
 
-This is a boilerplate project used for starting new projects!
+The Api has a few different routes to allow users to view current animals that are up for adoption.
 
-## How do set up?
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+##Developed By Jonny Deates & Heesu Kang
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
 
-## Scripts
-
-Start the application `npm start`
-
-Start nodemon for the application `npm run dev`
-
-Run the tests in watch mode `npm test`
-
-## Deploying
-
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+###/api/users 
+Gets all of the current users in line waiting to view the adoption list. 
+###/api/users/line 
+Moves the line to the next person who is waiting
+Also returns the person who just left the line and an updated array of the users.
+###/api/users/:id
+Gets a users by their specific Id
+###/api/cats
+Gets all cats on the adoption site
+return it as a JSON array
+###/api/cats/:id
+Gets a single cat on the adoption site
+returns it as an JSON Object
+###/api/dogs
+Gets all cats on the adoption site
+return it as a JSON array
+###/api/dogs/:id
+Gets a single cat on the adoption site
+returns it as an JSON Object
