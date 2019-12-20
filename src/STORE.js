@@ -1,3 +1,9 @@
+const Queue = require('./utils/queue');
+const users = new Queue();
+users.enqueue({id: 0, name: 'Tom'});
+users.enqueue({id: 1, name: 'Andrew'});
+users.enqueue({id: 2, name: 'Jenny'});
+users.enqueue({id: 3, name: 'Everlyn'});
 const dogs = [
     {
         id: 0,
@@ -10,7 +16,7 @@ const dogs = [
         story: 'Owner Passed away'
     },
     {
-        id: 0,
+        id: 1,
         imageURL: 'https://images.dog.ceo/breeds/poodle-standard/n02113799_6730.jpg',
         imageDescription: 'A smiling poodle with flower.',
         name: 'Hello',
@@ -20,7 +26,7 @@ const dogs = [
         story: 'Owner Passed away'
     },
     {   
-        id: 0,
+        id: 2,
         imageURL: 'https://images.dog.ceo/breeds/keeshond/n02112350_7038.jpg',
         imageDescription: 'A smiling keeshond on the grasses.',
         name: 'Cute',
@@ -42,7 +48,7 @@ const cats = [
         story: 'Thrown on the street'
     },
     {
-        id: 0,
+        id: 1,
         imageURL:'https://cdn2.thecatapi.com/images/e99.jpg',
         imageDescription: 'Orange bengal cat with black stripes and some white lounging on concrete.',
         name: 'Cutey',
@@ -53,7 +59,7 @@ const cats = [
     },
     {
 
-        id: 0,
+        id: 2,
         imageURL:'https://cdn2.thecatapi.com/images/7uITSSyIk.jpg',
         imageDescription: 'Light brown with white color cute cat.',
         name: 'Hello',
@@ -64,6 +70,6 @@ const cats = [
     }
 ];
 
-module.exports = {dogs, cats};
+module.exports = {dogs, cats, users};
 
 
