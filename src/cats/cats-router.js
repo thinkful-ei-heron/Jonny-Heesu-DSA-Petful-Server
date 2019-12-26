@@ -13,7 +13,7 @@ catsRouter
     .route('/:id')
     .all((req, res, next) => {
         const {id} = req.params;
-
+        
         let cat = CatsService.getById(id);
         if (!cat) {
             return res.status(404).json({

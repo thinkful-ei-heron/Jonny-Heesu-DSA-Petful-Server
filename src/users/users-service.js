@@ -10,7 +10,6 @@ const UsersService = {
     }
     return usersArr;
   },
-
   getById(id) {
     let usersTemp = users.first;
     let user = null;

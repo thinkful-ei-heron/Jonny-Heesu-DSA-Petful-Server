@@ -20,12 +20,14 @@ usersRouter
         res.json(JSON.stringify(UsersService.postUser(name)));
         res.status(201)
     });
+
 usersRouter
     .route('/line')
     .get((req, res, next) => {
         res.json({left: UsersService.moveLine(), users: UsersService.getAllUsers()}).status(200);
         //next()
-    })
+    });
+
 usersRouter
     .route('/:id')
     .all((req, res, next) => {

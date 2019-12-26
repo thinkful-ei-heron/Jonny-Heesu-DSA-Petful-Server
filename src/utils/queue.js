@@ -3,13 +3,13 @@ class Node {
     this.value = value;
     this.next = null;
   }
-}
+};
 class Queue {
   constructor() {
     this.first = null;
     this.last = null;
     this.length = 0;
-  }
+  };
 
   enqueue(data) {
     const node = new Node(data);
@@ -22,7 +22,7 @@ class Queue {
       this.last.next = node;
     }
     this.last = node;
-  }
+  };
 
   dequeue() {
     if (this.first === null) {
@@ -35,7 +35,7 @@ class Queue {
     }
     this.length--;
     return node.value;
-  }
+  };
   
   remove(data) {
     if (!this.first) {
@@ -45,6 +45,7 @@ class Queue {
       this.first = this.first.next;
       return;
     }
+    
     let currNode = this.first;
     let previousNode = this.first;
 
@@ -58,8 +59,8 @@ class Queue {
     }
     this.length--;
     previousNode.next = currNode.next;
-  }
-}
+  };
+};
 
 module.exports = Queue;
 
