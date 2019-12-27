@@ -30,7 +30,6 @@ dogsRouter
     })
     .delete((req, res, next) => {
         const {id} = req.params;
-
         DogsService.deleteDog(id);
         res.status(204).end();
         next();

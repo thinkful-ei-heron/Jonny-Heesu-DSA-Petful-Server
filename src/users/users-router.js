@@ -1,5 +1,6 @@
 const express = require('express');
 const UsersService = require('./users-service');
+const AnimalsService = require('../animals/animals-service');
 const usersRouter = express.Router();
 
 usersRouter
@@ -27,7 +28,16 @@ usersRouter
         res.json({left: UsersService.moveLine(), users: UsersService.getAllUsers()}).status(200);
         //next()
     });
+usersRouter
+    .route('/reset-users')
+    .get((req, res, next) => {
+        if(UsersService.getAllUsers().length < 1) {
+            UsersService.resetUsers();
+            AnimalsService.resetAnimals();
+        }
 
+        res.json(UsersService.getAllUsers()).status(200);
+    });
 usersRouter
     .route('/:id')
     .all((req, res, next) => {
@@ -47,12 +57,6 @@ usersRouter
     .get((req, res, next) => {
         res.json(res.user)
     })
-    .delete((req, res, next) => {
-        const {id} = req.params;
-        UsersService.deleteUser(id);
-        res.status(204).end();
-        next()
-    });
 
 module.exports = usersRouter;
 

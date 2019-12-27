@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const dogsRouter = require('./dogs/dogs-router');
 const catsRouter = require('./cats/cats-router');
+const animalsRouter = require('./animals/animals-router');
 const usersRouter = require('./users/users-router');
 const { NODE_ENV ,CLIENT_ORIGIN } = require('./config');
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/api/dogs',dogsRouter);
 app.use('/api/cats',catsRouter);
 app.use('/api/users',usersRouter);
+app.use('/api/animals',animalsRouter);
 
 app.use(errorHandler);
 

@@ -1,4 +1,4 @@
-const {users} = require('../STORE');
+const {users, animals} = require('../STORE');
 
 const UsersService = {
   getAllUsers() {
@@ -20,11 +20,18 @@ const UsersService = {
       return null;
     return usersTemp.value
   },
-  deleteUser(user) {
-    return users.remove(user.name)
-  },
   moveLine() {
-    return  users.dequeue();
+    if(users.first)
+      return  {user: users.dequeue(), animal: animals.dequeue()};
+    else {
+      return null;
+    }
+  },
+  resetUsers() {
+    users.enqueue({id: 0, name: 'Tom'});
+    users.enqueue({id: 1, name: 'Andrew'});
+    users.enqueue({id: 2, name: 'Jenny'});
+    users.enqueue({id: 3, name: 'Everlyn'});
   },
   postUser(user){
     users.enqueue({id: users.length, name: user});

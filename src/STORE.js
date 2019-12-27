@@ -1,10 +1,6 @@
 const Queue = require('./utils/queue');
 const users = new Queue();
-
-users.enqueue({id: 0, name: 'Tom'});
-users.enqueue({id: 1, name: 'Andrew'});
-users.enqueue({id: 2, name: 'Jenny'});
-users.enqueue({id: 3, name: 'Everlyn'});
+const animals = new Queue();
 
 const dogs = [
     {
@@ -15,7 +11,8 @@ const dogs = [
         sex: 'Male',
         age: 3,
         breed: 'Golden Retriever',
-        story: 'Owner Passed away'
+        story: 'Owner Passed away',
+        adopted: false
     },
     {
         id: 1,
@@ -25,7 +22,8 @@ const dogs = [
         sex: 'Female',
         age: 6,
         breed: 'Poodle',
-        story: 'Owner Passed away'
+        story: 'Owner Passed away',
+        adopted: false
     },
     {   
         id: 2,
@@ -35,7 +33,8 @@ const dogs = [
         sex: 'Female',
         age: 1,
         breed: 'Keeshond',
-        story: 'Owner Passed away'
+        story: 'Owner Passed away',
+        adopted: false
     },
     {
         id: 3,
@@ -45,7 +44,8 @@ const dogs = [
         sex: 'Male',
         age: 2,
         breed: 'Terrier Norfolk',
-        story: 'Owner Passed away'
+        story: 'Owner Passed away',
+        adopted: false
     }
 ];
 
@@ -58,7 +58,8 @@ const cats = [
         sex: 'Female',
         age: 2,
         breed: 'Bengal',
-        story: 'Thrown on the street'
+        story: 'Thrown on the street',
+        adopted: false
     },
     {
         id: 1,
@@ -68,18 +69,20 @@ const cats = [
         sex: 'Female',
         age: 1,
         breed: 'Burmilla',
-        story: 'Thrown on the street'
+        story: 'Thrown on the street',
+        adopted: false
     },
     {
 
         id: 2,
         imageURL:'https://cdn2.thecatapi.com/images/7uITSSyIk.jpg',
         imageDescription: 'Light brown with white color cute cat.',
-        name: 'Hello',
+        name: 'CarFax',
         sex: 'Male',
         age: 3,
         breed: 'Nebelung',
-        story: 'Thrown on the street'
+        story: 'Thrown on the street',
+        adopted: false
     },
     {
         id: 3,
@@ -89,10 +92,22 @@ const cats = [
         sex: 'Female',
         age: 0.5,
         breed: 'Nebelung',
-        story: 'Thrown on the street'
+        story: 'Thrown on the street',
+        adopted: false
+    },
+    {
+        id: 4,
+        imageURL:'https://cdn2.thecatapi.com/images/-bIqI5S6F.jpg',
+        imageDescription: 'White color cute small cat.',
+        name: 'Tomato',
+        sex: 'Female',
+        age: 0.8,
+        breed: 'Nebelung',
+        story: 'Thrown on the street',
+        adopted: true
     }
 ];
 
-module.exports = {dogs, cats, users};
+module.exports = {dogs, cats, users, animals};
 
 
